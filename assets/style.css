@@ -58,7 +58,7 @@ a:active,
 .github-links a:active > img {
     opacity: 70%;
 }
-h3 {
+h2 {
     margin: 16px 0 8px 0;
     font-size: 14pt;
 }
