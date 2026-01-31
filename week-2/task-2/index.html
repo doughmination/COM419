@@ -112,10 +112,13 @@
         // Page loader - hide after everything loads
         window.addEventListener('load', () => {
             const loader = document.querySelector('.page-loader');
-            loader.style.opacity = '0';
+            // Wait 1.5 seconds before starting to fade out
             setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 1500);
         });
 
         // Ember particle effect that follows mouse
