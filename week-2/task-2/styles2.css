@@ -139,46 +139,37 @@ body {
   border-top: 2px solid rgba(255, 215, 0, 0.3);
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.nav a {
-  color: #d4af37;
+.nav-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(40, 40, 60, 0.4) 0%, rgba(30, 30, 50, 0.4) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
   text-decoration: none;
+  color: #d4af37;
   font-size: 1rem;
   font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
 }
 
-.nav a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ffd700, #ff8c00);
-  transform: translateX(-50%);
-  transition: width 0.3s ease;
-}
-
-.nav a:hover {
+.nav-badge:hover {
   color: #fff;
   background: rgba(255, 215, 0, 0.1);
-  transform: translateY(-2px);
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transform: scale(1.05);
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-.nav a:hover::before {
-  width: 80%;
-}
-
-.nav a:active {
-  transform: translateY(0);
+.nav-badge:active {
+  transform: scale(1.02);
 }
 
 /* =========================
@@ -312,6 +303,62 @@ h3 {
   transform: translateX(10px);
   border-left-color: #ffd700;
   box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* =========================
+   EMBERS
+   ========================= */
+.ember {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #ff8c00, #ff4500);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  box-shadow: 0 0 6px #ff6600;
+  animation: emberFade 1.5s ease-out forwards;
+}
+
+@keyframes emberFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.3);
+  }
+}
+
+/* =========================
+   FADE-IN ANIMATIONS
+   ========================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
