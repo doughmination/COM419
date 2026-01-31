@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-
+    
     <title>COM419 - Week 2 Task 2 | Clove Twilight</title>
-
+    
     <meta name="description" content="COM419 Week 2 Task 2 by Clove Twilight." />
     <meta name="author" content="Clove Twilight" />
     <meta name="robots" content="index, follow" />
-
+    
     <link rel="canonical" href="https://doughmination.github.io/COM419/week-2/task-2/" />
     <link rel="icon" type="image/png" href="../../assets/icon.png" />
     <link rel="apple-touch-icon" href="../../assets/icon.png" />
-
+    
     <meta name="theme-color" content="#8b5cf6" />
-
+    
     <meta property="og:site_name" content="COM419 (Clove Twilight)" />
     <meta property="og:title" content="COM419 - Week 2 Task 2 | Clove Twilight" />
     <meta property="og:description" content="COM419 Week 2 Task 2 by Clove Twilight." />
@@ -24,21 +24,29 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://doughmination.github.io/COM419/week-2/task-2/" />
     <meta property="og:locale" content="en_GB" />
-
+    
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="COM419 - Week 2 Task 2 | Clove Twilight" />
     <meta name="twitter:description" content="COM419 Week 2 Task 2 by Clove Twilight." />
     <meta name="twitter:image" content="https://doughmination.github.io/COM419/assets/icon.png" />
-
+    
     <link rel="stylesheet" href="./styles2.css">
 </head>
 
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Skyrim...</p>
+        </div>
+    </div>
+
     <a href="/COM419/week-2" class="back-badge">Back to Week 2</a>
 
     <!-- HERO / BANNER -->
     <header class="hero">
-        <h1 class="fade-in">Welcome to<br>Skyrim</h1>
+        <h1>Welcome to<br>Skyrim</h1>
 
         <nav class="nav">
             <a href="#" class="nav-badge">Home Page</a>
@@ -101,6 +109,15 @@
     </main>
 
     <script>
+        // Page loader - hide after everything loads
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.page-loader');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        });
+
         // Ember particle effect that follows mouse
         document.addEventListener('mousemove', (e) => {
             // Create ember every few pixels moved (throttle)
@@ -110,12 +127,32 @@
                 ember.style.left = e.pageX + 'px';
                 ember.style.top = e.pageY + 'px';
                 document.body.appendChild(ember);
-
+                
                 // Remove ember after animation completes
                 setTimeout(() => {
                     ember.remove();
                 }, 1500);
             }
+        });
+
+        // Scroll-based fade-in for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
         });
     </script>
 
