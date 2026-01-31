@@ -1,0 +1,312 @@
+/* Comic Code font declarations */
+@font-face {
+    font-family: 'Comic Code';
+    src: url('https://fonts.doughmination.win/ComicCode-Regular_2022-05-24-151938_hsmz.woff2') format('woff2'),
+        url('https://fonts.doughmination.win/ComicCode-Regular_2022-05-24-151938_hsmz.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comic Code';
+    src: url('https://fonts.doughmination.win/ComicCode-Italic_2022-05-24-151939_rdtu.woff2') format('woff2'),
+        url('https://fonts.doughmination.win/ComicCode-Italic_2022-05-24-151939_rdtu.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Comic Code';
+    src: url('https://fonts.doughmination.win/ComicCode-Medium_2022-05-24-151941_ugqm.woff2') format('woff2'),
+        url('https://fonts.doughmination.win/ComicCode-Medium_2022-05-24-151941_ugqm.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comic Code';
+    src: url('https://fonts.doughmination.win/ComicCode-Bold_2022-05-24-152309_zqkm.woff2') format('woff2'),
+        url('https://fonts.doughmination.win/ComicCode-Bold_2022-05-24-152309_zqkm.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Code', 'Courier New', monospace;
+  background-color: #0a0a0a;
+  background-image: 
+    linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23111"/><path d="M0 0L100 100M100 0L0 100" stroke="%23222" stroke-width="0.5"/></svg>');
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO / BANNER
+   ========================= */
+.hero {
+  height: 80vh;
+  width: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("../../assets/week2/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+  margin-top: 20vh;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 0 40px rgba(255, 140, 0, 0.4),
+    2px 2px 8px rgba(0, 0, 0, 0.9);
+  color: #ffd700;
+  letter-spacing: 3px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.6),
+      0 0 40px rgba(255, 140, 0, 0.4),
+      2px 2px 8px rgba(0, 0, 0, 0.9);
+  }
+  to {
+    text-shadow: 
+      0 0 30px rgba(255, 215, 0, 0.8),
+      0 0 60px rgba(255, 140, 0, 0.6),
+      2px 2px 8px rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* =========================
+   NAV
+   ========================= */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0;
+  background: linear-gradient(180deg, 
+    rgba(20, 20, 30, 0.95) 0%, 
+    rgba(10, 10, 20, 0.98) 100%);
+  border-top: 2px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.nav a {
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #fff;
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.nav a:hover::before {
+  width: 80%;
+}
+
+.nav a:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.container {
+  width: 80%;
+  margin: 60px auto;
+  background: linear-gradient(135deg, 
+    rgba(20, 20, 30, 0.3) 0%, 
+    rgba(30, 30, 40, 0.2) 100%);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-align: center;
+  margin: 60px 0 40px;
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #ffd700, 
+    transparent);
+}
+
+h3 {
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   TWO COLUMN SECTIONS
+   ========================= */
+.two-col {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  background: rgba(40, 40, 50, 0.3);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.two-col:hover {
+  background: rgba(50, 50, 60, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.two-col img {
+  width: 45%;
+  order: 1;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.two-col img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+.two-col div {
+  width: 55%;
+  order: 2;
+}
+
+.two-col p {
+  color: #c8c8c8;
+  font-size: 1.05rem;
+}
+
+/* 🔑 FORCE REVERSE ORDER */
+.two-col.reverse img {
+  order: 2;
+}
+
+.two-col.reverse div {
+  order: 1;
+}
+
+/* =========================
+   TESTIMONIALS
+   ========================= */
+.testimonials {
+  text-align: center;
+  margin-top: 40px;
+  background: linear-gradient(135deg, 
+    rgba(40, 40, 60, 0.4) 0%, 
+    rgba(30, 30, 50, 0.4) 100%);
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 215, 0, 0.2);
+}
+
+.testimonials p {
+  margin: 25px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #e8e8e8;
+  padding: 20px;
+  background: rgba(20, 20, 30, 0.5);
+  border-radius: 8px;
+  border-left: 4px solid #d4af37;
+  transition: all 0.3s ease;
+}
+
+.testimonials p:hover {
+  background: rgba(30, 30, 40, 0.6);
+  transform: translateX(10px);
+  border-left-color: #ffd700;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .two-col {
+    flex-direction: column;
+  }
+  
+  .two-col img,
+  .two-col div {
+    width: 100%;
+    order: unset !important;
+  }
+  
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
