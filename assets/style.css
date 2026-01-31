@@ -1,4 +1,4 @@
- html {
+html {
      height: 100%;
  }
 
@@ -99,6 +99,29 @@
  .github-links img {
      filter: drop-shadow(1px 1px 2px #0004);
      height: 64px;
+ }
+
+ /* Back Badge Styles */
+ .back-badge {
+     display: inline-block;
+     background: linear-gradient(135deg, #0005 0%, #0003 100%);
+     border: 1px solid #fff3;
+     border-radius: 20px;
+     padding: 0.5rem 1.5rem;
+     margin: 1rem 0;
+     transition: all 0.3s ease;
+     text-decoration: none;
+     color: #fff;
+ }
+
+ .back-badge:hover {
+     border-color: #fff8;
+     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+     transform: scale(1.05);
+ }
+
+ .back-badge::before {
+     content: '← ';
  }
 
  @media (max-width: 832px) {

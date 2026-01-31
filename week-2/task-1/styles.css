@@ -11,6 +11,35 @@ body {
 }
 
 /* =========================
+   BACK BADGE
+   ========================= */
+.back-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.back-badge:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.back-badge::before {
+  content: '← ';
+}
+
+/* =========================
    HERO / BANNER
    ========================= */
 .hero {
