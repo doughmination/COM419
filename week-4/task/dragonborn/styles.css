@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.q1 {
+    display: block;
+}
+
+.q2 {
+    display: none;
+}
+
+.q3 {
+    display: none;
+}
