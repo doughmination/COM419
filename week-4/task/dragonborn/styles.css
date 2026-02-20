@@ -12,6 +12,13 @@ body {
 
 .q1 {
     display: block;
+    text-align: center;
+    padding: 1em;
+    background-color: #0005;
+    border-radius: 4px;
+    border: 1px solid #fff3;
+    margin: 1em auto;
+    font-size: 14pt;
 }
 
 .q2 {
