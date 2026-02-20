@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* =========================
+   BACK BADGE
+   ========================= */
+.back-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.back-badge:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.back-badge::before {
+  content: '← ';
+}
+
+/* =========================
+   HERO / BANNER
+   ========================= */
+.hero {
+  height: 80vh;
+  width: 100%;
+  background-image: url("../../assets/week2/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 20vh;
+  font-size: 3rem;
+}
+
+/* =========================
+   NAV
+   ========================= */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.container {
+  width: 80%;
+  margin: 60px auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 60px 0 30px;
+}
+
+/* =========================
+   TWO COLUMN SECTIONS
+   ========================= */
+.two-col {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.two-col img {
+  width: 45%;
+  order: 1;
+}
+
+.two-col div {
+  width: 55%;
+  order: 2;
+}
+
+/* 🔑 FORCE REVERSE ORDER */
+.two-col.reverse img {
+  order: 2;
+}
+
+.two-col.reverse div {
+  order: 1;
+}
+
+/* =========================
+   TESTIMONIALS
+   ========================= */
+.testimonials {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.testimonials p {
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* =========================
+   COOKIES / CONSENT BANNER
+   ========================= */
+.cookies {
+  margin-top: 60px;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cookies h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+.cookies p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.cookies button {
+  padding: 0.6rem 1.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cookies button:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.cookies button#consent {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cookies button#consent:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cookies-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+@media print {
+  .back-badge {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .two-col {
+    height: 40vh;
+  }
+  .two-col.reverse {
+    height: 40vh;
+  }
+}
