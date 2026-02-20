@@ -130,6 +130,62 @@ h2 {
   font-style: italic;
 }
 
+/* =========================
+   COOKIES / CONSENT BANNER
+   ========================= */
+.cookies {
+  margin-top: 60px;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cookies h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+
+.cookies p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.cookies button {
+  padding: 0.6rem 1.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cookies button:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.cookies button#consent {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cookies button#consent:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.cookies-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
 @media print {
   .back-badge {
     display: none;
