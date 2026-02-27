@@ -7,7 +7,7 @@ document.getElementById("places").addEventListener('click', plbtn => {
             const placesList = document.createElement('ul');
             data.forEach(place => {
                 const placeItem = document.createElement('li');
-                placeItem.textContent = `${place.name} - ${place.description}`;
+                placeItem.textContent = `${place.name} - ${place.location}`;
                 placesList.appendChild(placeItem);
             });
             document.body.appendChild(placesList);
