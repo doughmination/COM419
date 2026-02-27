@@ -1,0 +1,40 @@
+h3 {
+    margin-bottom: 0.5em;
+    text-align: center;
+    padding: 1em;
+    background-color: #0005;
+    border-radius: 4px;
+    border: 1px solid #fff3;
+}
+
+p {
+    text-align: center;
+    padding: 1em;
+    background-color: #0005;
+    border-radius: 4px;
+    border: 1px solid #fff3;
+    margin: 0 auto 1em auto;
+    width: fit-content;
+}
+
+.form{
+    display: block;
+    text-align: center;
+    padding: 1em;
+    background-color: #0005;
+    border-radius: 4px;
+    border: 1px solid #fff3;
+    margin: 1em auto;
+    font-size: 14pt;
+}
+
+.thanks {
+    display: none;
+    text-align: center;
+    padding: 1em;
+    background-color: #0005;
+    border-radius: 4px;
+    border: 1px solid #fff3;
+    margin: 1em auto;
+    font-size: 14pt;
+}
