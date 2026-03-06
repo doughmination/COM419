@@ -24,7 +24,52 @@ document.getElementById("places").addEventListener("click", () => {
 });
 
 document.getElementById("creatures").addEventListener("click", () => {
+
+  display.innerHTML = ""; // clear old content
+
   fetch("/COM419/week-6/task/about/data/creatures.json")
     .then(response => response.json())
-    .then(data => renderList(data, creature => `${creature.name} - ${creature.description}`));
+    .then(data => {
+
+      data.forEach(creature => {
+
+        // ==========================
+        // 1. Main Container
+        // ==========================
+        const container = document.createElement("div");
+        container.classList.add("resultcontainer");
+
+        display.appendChild(container);
+
+        // ==========================
+        // 2. Description Section
+        // ==========================
+        const desc = document.createElement("div");
+        desc.classList.add("resultdesc");
+
+        desc.innerHTML = `
+          <h3>${creature.name}</h3>
+          <p>${creature.description}</p>
+        `;
+
+        container.appendChild(desc);
+
+        // ==========================
+        // 3. Image Section
+        // ==========================
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("resultimgcontainer");
+
+        const img = new Image();
+        img.src = creature.image; // <-- Must exist in JSON
+        img.alt = creature.name;
+        img.style.maxWidth = "200px"; // optional safety
+
+        imgContainer.appendChild(img);
+        container.appendChild(imgContainer);
+
+      });
+
+    })
+    .catch(error => console.error("Error loading creatures:", error));
 });

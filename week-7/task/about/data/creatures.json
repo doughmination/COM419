@@ -1,20 +1,25 @@
 [{
     "name": "Mudcrab", 
-    "description": "They're like crabs - but muddy!"
+    "description": "They're like crabs - but muddy!",
+    "image": "https://doughmination.github.io/COM419/assets/mudcrab.png"
 }, 
 {
     "name": "Frost Troll", 
-    "description": "They're like trolls - but frosty!"
+    "description": "They're like trolls - but frosty!",
+    "image": "https://doughmination.github.io/COM419/assets/frost-troll.png"
 }, 
 {
     "name": "Cave Bear", 
-    "description": "They're like bears - but in caves!"
+    "description": "They're like bears - but in caves!",
+    "image": "https://doughmination.github.io/COM419/assets/cave-bear.png"
 }, 
 {
     "name": "Snowy Sabre Cat", 
-    "description": "They're like sabre cats - but snowy!"
+    "description": "They're like sabre cats - but snowy!",
+    "image": "https://doughmination.github.io/COM419/assets/snowy-sabre-cat.png"
 }, 
 {
     "name": "Frostbite Spider", 
-    "description": "... Nope!"
+    "description": "... Nope!",
+    "image": "https://doughmination.github.io/COM419/assets/frostbite-spider.png"
 }]
