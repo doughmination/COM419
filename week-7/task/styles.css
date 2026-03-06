@@ -186,11 +186,12 @@ h2 {
   gap: 1rem;
 }
 
-.resultcontainer{
-  width: 50%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
+.resultcontainer {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .resultcontainer, .resultdesc{
@@ -202,6 +203,13 @@ h2 {
   max-height: 200px;
   min-width: 200px;
   min-height: 200px;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
 
 @media print {
